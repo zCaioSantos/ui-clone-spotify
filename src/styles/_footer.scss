@@ -64,11 +64,97 @@ footer {
 
             .navigation__footer-top-social {
                 
+                display: flex;
+                align-items: flex-start;
+                margin: 20px 15px 0 auto;
+                gap: 1rem;
 
                 li {
 
+                    width: 54px;
+                    height: 54px;
+                    border-radius: 100%;
+                    background-color: $secondary;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .social__icon {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        svg {
+                            width: 24px;
+                            border-radius: 100%;
+
+                            transition: all .3s ease;
+                            fill: $white;
+                        }
+                    }
+
+                    &:hover, &:active {
+                        .social__icon {
+                            svg {
+                                fill: $color-hover;
+                            }
+                        }
+                    }
                 }
             }
+        }
+
+        .navigation__footer-bottom {
+
+            padding-top: 4.5rem;
+
+            .navigation__footer-bottom-brasil {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 0.3rem;
+
+                span {
+                    color: $gray;
+                    font-size: 12px;
+                    cursor: pointer;
+
+                    &:hover, &:active {
+                        color: $color-hover;
+                    }
+                }
+            }
+
+            .navigation__footer-bottom-description {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-size: 12px;
+                margin: 1rem 0;
+
+                ul {
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+
+                    li {
+                        a {
+                            color: $gray;
+                            transition: .3s ease;
+
+                            &:hover, &:active {
+                                color: $color-hover;
+                            }
+                        }
+                    }
+                }
+
+                span {
+                    color: $gray;
+                }
+            }
+
         }
     }
 
